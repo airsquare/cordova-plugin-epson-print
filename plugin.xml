@@ -37,4 +37,28 @@
         <source-file src="src/android/libepos2.so" target-dir="libs/armeabi-v7a" />
         <source-file src="src/android/libeposeasyselect.so" target-dir="libs/armeabi-v7a" />
     </platform>
+
+    <platform name="ios">
+
+         <config-file target="config.xml" parent="/*">
+            <feature name="EpsonPrint">
+                <param name="ios-package" value="EpsonPrint"/>
+            </feature> 
+        </config-file>
+
+        <header-file src="src/ios/EpsonPrint.h" />
+        <source-file src="src/ios/EpsonPrint.m" />	
+        <header-file src="src/ios/libs/ePOSEasySelect.h" />
+        <header-file src="src/ios/libs/ePOS2.h" />
+		<source-file src="src/ios/libs/libepos2.a" framework="true"/>	
+		<source-file src="src/ios/libs/libeposeasyselect.a" framework="true"/>	
+
+		<framework src="ExternalAccessory.framework" />
+		<framework src="Foundation.framework" />
+		<framework src="UIKit.framework" />
+		<framework src="CoreGraphics.framework" />
+		<framework src="libxml2.2.dylib" />
+
+    </platform>
+
 </plugin>

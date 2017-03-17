@@ -11,7 +11,7 @@
 	int* chosen_series;
 	int lang_;
 	CDVInvokedUrlCommand* current_command;
-	NSArray *found_printers;
+	NSArray* found_printers;
 }
 
 - (void)printReceipt:(CDVInvokedUrlCommand*)command;

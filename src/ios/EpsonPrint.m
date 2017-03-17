@@ -137,7 +137,7 @@
     bool new_printer = YES;
     for (NSDictionary *dic in found_printers){
         NSString *mac = (NSString*) [dic valueForKey:@"mac"];
-        if(found_mac == mac) {
+        if([found_mac isEqualToString:mac]) {
             new_printer = NO;
             break;
         }
